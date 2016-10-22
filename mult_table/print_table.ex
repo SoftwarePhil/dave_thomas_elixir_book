@@ -7,6 +7,7 @@ defmodule PrintTable  do
   """
 #so many reduces / maps wonder how to make more efficent
 
+#move values part outide module, pass in only lists of lists, generalize to no only ints ..
   def print(list) do
     _values = with list = Enum.map(list, fn({_num, list}) -> list end),
          longest = Enum.map(list, fn(x) -> find_longest_number(x) end) |> Enum.max,
